@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Beranda"/>
+        <item
+            android:id="@+id/addIklan"
+            android:icon="@drawable/camera"
+            android:title="Pasang Iklan"/>
+        <item
+            android:id="@+id/iklanSaya"
+            android:icon="@drawable/fav"
+            android:title="Iklan Saya"/>
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/chat"
+            android:title="Chat"/>
+    </group>
+
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/help"
+            android:title="Bantuan"/>
+        <item
+            android:id="@+id/log"
+            android:icon="@drawable/login"
+            android:title="Daftar / Login"/>
+    </group>
+
+</menu>

@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">BeeLi</string>
+
+    <string name="lihat_kategori"><u>Lihat Semua</u></string>
+    <string name="login"><u>Login ke akun Anda</u></string>
+    <string name="share_profil"><u>Bagikan Profil</u></string>
+    <string name="penawaran"><u>Buat penawaran</u></string>
+    <string name="context"><b>Suka dengan barang ini?</b> Tanyakan Staff ahli kami melalui chat atau telepon</string>
+
+<!--    Array for Spinner-->
+    <string-array name="tahun_list">
+        <item></item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+    </string-array>
+    <string-array name="kamar">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>>10</item>
+    </string-array>
+    <string-array name="kamarMandi">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>>10</item>
+    </string-array>
+    <string-array name="merkMobil">
+        <item></item>
+        <item>Honda</item>
+        <item>Suzuki</item>
+        <item>Mazda</item>
+        <item>Toyota</item>
+        <item>Nissan</item>
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Ford</item>
+        <item>Hyundai</item>
+    </string-array>
+    <string-array name="merkMotor">
+        <item></item>
+        <item>BMW</item>
+        <item>Ducati</item>
+        <item>Harley Davidson</item>
+        <item>Honda</item>
+        <item>Kawasaki</item>
+        <item>KTM</item>
+        <item>Minerva</item>
+        <item>Suzuki</item>
+        <item>Yamaha</item>
+        <item>Lain-lain</item>
+    </string-array>
+    <string-array name="merkElektronik">
+        <item></item>
+        <item>Samsung</item>
+        <item>Huawei</item>
+        <item>Xiaomi</item>
+        <item>Apple</item>
+        <item>Oppo</item>
+        <item>Vivo</item>
+        <item>Lenovo</item>
+        <item>ASUS</item>
+    </string-array>
+    <string-array name="tipeKerja">
+        <item></item>
+        <item>Administrasi</item>
+        <item>Freelance</item>
+        <item>Marketing &amp; Sales</item>
+        <item>SPG &amp; SPB</item>
+        <item>Security</item>
+        <item>Driver</item>
+        <item>Lowongan Lainnya</item>
+    </string-array>
+    <string-array name="tipeJasa">
+        <item></item>
+        <item>Rental Mobil &amp; Motor</item>
+        <item>Bengkel Mobil</item>
+        <item>Bengkel Motor</item>
+        <item>Desain</item>
+        <item>Pernikahan</item>
+        <item>Komputer &amp; Internet</item>
+        <item>Kursus</item>
+        <item>Tour &amp; Travel</item>
+        <item>Biro Jasa</item>
+        <item>Service Elektronik</item>
+        <item>Pembantu &amp; Rumah Tangga</item>
+        <item>Games &amp; Console</item>
+        <item>Jasa Lainnya</item>
+    </string-array>
+    <string-array name="tipeAlatMusik">
+        <item></item>
+        <item>Gitar &amp; Bass</item>
+        <item>Keyboard &amp; Piano</item>
+        <item>Drum &amp; Perkusi</item>
+        <item>Alat Musik Tiup</item>
+        <item>Alat Musik Tradisional</item>
+        <item>Mixer dan Microphones</item>
+        <item>Studio dan Panggung</item>
+        <item>Aksesoris Musik</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="tipeFashionPria">
+        <item></item>
+        <item>Baju</item>
+        <item>Jas, Jaket &amp; Sweater</item>
+        <item>Celana</item>
+        <item>Sandal</item>
+        <item>Sepatu</item>
+        <item>Aksesoris</item>
+    </string-array>
+    <string-array name="tipeFashionWanita">
+        <item></item>
+        <item>Atasan</item>
+        <item>Celana</item>
+        <item>Rok</item>
+        <item>Busana Muslim</item>
+        <item>Dress</item>
+        <item>Kebaya</item>
+        <item>Baju Tidur</item>
+        <item>Baju Hamil</item>
+        <item>Tas &amp; Dompet</item>
+        <item>Aksesoris</item>
+    </string-array>
+
+<!--    End-->
+</resources>

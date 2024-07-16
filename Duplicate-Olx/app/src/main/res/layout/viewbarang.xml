@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F4F5">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:contentInsetStart="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="7dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bMenu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/menu" />
+
+                <ImageView
+                    android:id="@+id/icLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/icon"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/share_ic"/>
+
+            <ImageView
+                android:id="@+id/favorite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/favorit_ic" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F4F5">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:iss_period="3000"
+        app:iss_auto_cycle="true"
+        app:iss_delay="3000"
+        android:background="@drawable/shadow"
+        app:iss_title_background="@drawable/bg_gradient"
+        >
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/photoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@id/imageSlider"
+        android:layout_marginTop="6dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/highlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/round_kategori"
+                android:backgroundTint="#FFCE32"
+                android:drawableLeft="@drawable/elec_ic"
+                android:drawablePadding="4dp"
+                android:padding="4dp"
+                android:text="HIGHLIGHT"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_kategori"
+                android:backgroundTint="#CEDDFF"
+                android:drawableLeft="@drawable/verified_ic"
+                android:drawableTint="#0073FF"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="4dp"
+                android:text="PENJUAL TERVERIFIKASI"
+                android:textColor="#3A77FF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/judul_barang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout_1"
+            android:layout_marginLeft="14dp"
+            android:fontFamily="sans-serif"
+            android:text="Honda Civic (2022)"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bahan_bakar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/judul_barang"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:text="1.5 RS Bensin-AT"
+            android:textColor="#938989"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/harga_barang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bahan_bakar"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Rp 490.000.000"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/harga_barang"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:text="Apakah ini terlihat sesuai dengan anggaran Anda?"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/penawaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/penawaran"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_2"
+        android:layout_below="@id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_height="180dp">
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#426569"
+            android:textSize="20dp"
+            android:text="Deskripsi"/>
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/text3"
+            android:background="#B5B0B0"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_below="@id/view2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/deskripsi_barang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CIVIC TURBO HATCHBACK E 1.5 AT 2022 \n\nHITAM SUPER ISTIMEWA"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relative_layout_4"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/relative_layout_2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/pengguna_ic" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="Nama_Pengguna"/>
+             <ImageButton
+                 android:layout_width="wrap_content"
+                 android:background="@null"
+                 android:layout_marginRight="12dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:src="@drawable/next_ic"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linear_layout_4"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/relative_layout_4"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="66dp">
+        <TextView
+            android:id="@+id/id_iklan"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="#426569"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="ID IKLAN 00000000"/>
+        <TextView
+            android:id="@+id/laporkan_iklan"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#426569"
+            android:layout_marginRight="14dp"
+            android:layout_height="wrap_content"
+            android:text="LAPORKAN IKLAN INI"/>
+    </LinearLayout>
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/relative_layout_5"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_below="@+id/linear_layout_4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:background="@color/white">-->
+<!--        <TextView-->
+<!--            android:id="@id/text3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="8dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginTop="7dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#426569"-->
+<!--            android:textSize="18sp"-->
+<!--            android:text="Iklan Terkait"/>-->
+
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_below="@+id/text3"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:paddingEnd="5dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="13dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linear_layout_5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/iklan_container"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="160dp"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardElevation="5dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iklan1"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:src="@drawable/car" />-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_below="@+id/iklan1"-->
+<!--                            android:background="@color/gray"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:paddingStart="6dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/harga_iklan"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="sans-serif-condensed-medium"-->
+<!--                                android:gravity="start"-->
+<!--                                android:text="Rp 8.000.000.000"-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="15sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/sub_iklan"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/harga_iklan"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:layout_marginTop="4dp"-->
+<!--                                android:fontFamily="sans-serif-black"-->
+<!--                                android:text="New Mobil..."-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </RelativeLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/iklan_container2"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="160dp"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardElevation="5dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iklan2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:src="@drawable/car" />-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_below="@+id/iklan2"-->
+<!--                            android:background="@color/gray"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:paddingStart="6dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/harga_iklan2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="sans-serif-condensed-medium"-->
+<!--                                android:gravity="start"-->
+<!--                                android:text="Rp 8.000.000.000"-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="15sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/sub_iklan2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/harga_iklan2"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:layout_marginTop="4dp"-->
+<!--                                android:fontFamily="sans-serif-black"-->
+<!--                                android:text="New Mobil..."-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </RelativeLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/iklan_container3"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="160dp"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardElevation="5dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iklan3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:src="@drawable/car" />-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_below="@+id/iklan3"-->
+<!--                            android:background="@color/gray"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:paddingStart="6dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/harga_iklan3"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="sans-serif-condensed-medium"-->
+<!--                                android:gravity="start"-->
+<!--                                android:text="Rp 80.000.000"-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="15sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/sub_iklan3"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/harga_iklan3"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:layout_marginTop="4dp"-->
+<!--                                android:fontFamily="sans-serif-black"-->
+<!--                                android:text="New Mobil..."-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </RelativeLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/iklan_container4"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="160dp"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardElevation="5dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iklan4"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:src="@drawable/car2" />-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_below="@+id/iklan4"-->
+<!--                            android:background="@color/gray"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:paddingStart="6dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/harga_iklan4"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="sans-serif-condensed-medium"-->
+<!--                                android:gravity="start"-->
+<!--                                android:text="Rp 800.000.000"-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="15sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/sub_iklan4"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/harga_iklan4"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:layout_marginTop="4dp"-->
+<!--                                android:fontFamily="sans-serif-black"-->
+<!--                                android:text="New Mobil..."-->
+<!--                                android:textColor="#595E6A"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </RelativeLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+<!--            </LinearLayout>-->
+<!--        </HorizontalScrollView>-->
+<!--    </RelativeLayout>-->
+
+<!--    Footer-->
+    <include
+        android:layout_below="@id/linear_layout_4"
+        android:layout_height="135dp"
+        android:layout_width="match_parent"
+        layout="@layout/footer"/>
+</RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/toolbar_footer"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3D4A53"
+        android:layout_width="match_parent">
+        <TextView
+            android:gravity="start"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:id="@+id/text1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/context" />
+        <androidx.appcompat.widget.Toolbar
+            android:layout_below="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="18sp"
+            android:layout_height="150dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:layout_marginRight="10dp"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/round_footer"
+                    android:drawableLeft="@drawable/chat"
+                    android:drawableTint="@color/white"
+                    android:text="Chat" />
+
+                <Button
+                    android:paddingStart="10dp"
+                    android:layout_width="160dp"
+                    android:drawableTint="@color/white"
+                    android:drawableLeft="@drawable/phone"
+                    android:background="@drawable/round_footer"
+                    android:text="Telepon"
+                    android:layout_height="40dp"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+</RelativeLayout>

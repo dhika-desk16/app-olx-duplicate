@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="3dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#EFF1F3"
+
+        app:title="Pasang Iklan Anda"
+        android:elevation="1dp"
+        android:foregroundTint="@color/black"
+        app:navigationIcon="@drawable/arrow_left"
+        app:titleTextColor="@color/black" />
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:id="@+id/frame1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:text="Kategori Terpilih"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/kategori"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Mobil / Mobil Bekas"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/ubah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Ubah"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="italic|bold" />
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/kategori"
+                    android:background="@color/gray" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginTop="20dp"
+                    android:text="Sertakan Beberapa Detail"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="Merk" />
+
+                    <EditText
+                        android:id="@+id/merkMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_border_grey"
+                        android:ems="10"
+                        android:paddingVertical="10dp"
+                        android:paddingLeft="10dp"
+                        android:inputType="text"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayoutJudul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayoutTipe"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="Judul Iklan" />
+
+                    <EditText
+                        android:id="@+id/judulIklanMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_border_grey"
+                        android:ems="10"
+                        android:paddingVertical="10dp"
+                        android:paddingLeft="10dp"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearTahun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayoutJudul"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="Tahun" />
+
+                    <Spinner
+                        android:id="@+id/tahunMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_border_grey"
+                        android:paddingLeft="10dp"
+                        android:paddingVertical="10dp"
+                        android:entries="@array/tahun_list"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearBahanBakar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearTahun"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="Tipe Bahan Bakar" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout6">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bahanBakarDiesel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                android:foreground="@drawable/border_card">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginVertical="5dp"
+                                    android:text="Diesel" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bahanBakarBensin"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                android:foreground="@drawable/border_card"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_toEndOf="@+id/bahanBakarDiesel">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginVertical="5dp"
+                                    android:text="Bensin" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bahanBakarHybrid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                android:foreground="@drawable/border_card"
+                                android:layout_toEndOf="@+id/bahanBakarBensin">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginVertical="5dp"
+                                    android:text="Hybrid" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bahanBakarListrik"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                android:foreground="@drawable/border_card"
+                                android:layout_toEndOf="@+id/bahanBakarHybrid">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginVertical="5dp"
+                                    android:text="Listrik" />
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearWarna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearBahanBakar"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="Warna" />
+
+                    <EditText
+                        android:id="@+id/warnaMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_border_grey"
+                        android:inputType="text"
+                        android:paddingVertical="10dp"
+                        android:paddingLeft="10dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearWarna"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="Deskripsi" />
+
+                    <EditText
+                        android:id="@+id/deskripsiMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:paddingVertical="10dp"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/search_border_grey"
+                        android:inputType="textMultiLine"
+                        android:ems="10"
+                        android:gravity="start|top"
+                      />
+                    <View
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/gray" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout14"
+                    android:layout_marginTop="20dp"
+                    android:text="Tentukan Harga"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView5"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="Harga" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/search_border_grey">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Rp"
+                            android:textSize="15dp"
+                            android:layout_weight="10"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            app:srcCompat="@drawable/fa6solidrupiahsign"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/ubah"
+                            android:background="@color/gray" />
+                        <EditText
+                            android:id="@+id/hargaMotor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:paddingVertical="10dp"
+                            android:paddingLeft="10dp"
+                            android:backgroundTint="@color/white"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/gray" />
+                </LinearLayout>
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/unggah_foto_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout15"
+                    android:layout_marginTop="20dp" />
+                <Button
+                    android:id="@+id/btnSimpan"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/include"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/account_background"
+                    android:text="Pasang Iklan Sekarang" />
+            </RelativeLayout>
+             <include
+                android:id="@+id/footer"
+                layout="@layout/footer"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_below="@+id/frame1"
+                android:layout_marginTop="20dp" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
