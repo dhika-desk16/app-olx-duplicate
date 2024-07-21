@@ -21,6 +21,7 @@ public class DeleteToken extends Worker {
     @Override
     public Result doWork() {
         db.tokenDAO().deleteAllTokens();
+        Helper.reset(getApplicationContext());
         Log.e("DeleteToken", "doWork: Token Deleted" );
         return Result.success();
     }
