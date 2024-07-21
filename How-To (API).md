@@ -8,4 +8,4 @@ Persiapan
 Cara Menjalankan Api
 -
 1. Menjalankan api secara otomatis = jalankan/buka file local-start.bat
-2. Menjalankan api secara manual = php artisan serve --host= --port=80
+2. Menjalankan api secara manual = ```php artisan serve --host= --port=80```
