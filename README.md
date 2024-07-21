@@ -1,6 +1,5 @@
-PETUNJUK PENGGUNAAN
--
-
+BEELI - ANDROID APP 
+=
 
 API
 -
@@ -11,8 +10,8 @@ API
 - Jalankan API
 
 #### Cara Menjalankan Api
-- Menjalankan api secara otomatis = jalankan/buka file ```local-start.bat``` di ```RESTful-API\local-start.bat```
-- Menjalankan api secara manual =
+- Menjalankan api secara otomatis: jalankan/buka file ```local-start.bat``` di ```RESTful-API\local-start.bat```
+- Menjalankan api secara manual:
   ```
   php artisan serve --host= --port=80
   ```
