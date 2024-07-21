@@ -1,4 +1,3 @@
 PETUNJUK PENGGUNAAN
 -
-BUKA How-to (API).md
-BUKA How-to (ANDROID APP).md
+BUKA How-to (API).md dan How-to (ANDROID APP).md
