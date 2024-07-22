@@ -3,21 +3,21 @@ BEELI - ANDROID APP
 
 API
 -
-## Persiapan
-- Buat file ```.env```
-- Copy isi di file ```.env.example``` dan paste ke ```.env``` yang baru saja dibuat
-- Pastikan perangkat tersambung di router
-- Jalankan API
+## A. Persiapan
+1. Buat file `.env`
+2. Copy isi di file `.env.example` dan paste ke `.env` yang baru saja dibuat
+3. Pastikan perangkat tersambung di router
+4. **Jalankan API**
+    - Menjalankan api secara otomatis: jalankan/buka file `local-start.bat` di `RESTful-API\local-start.bat`
+    - Menjalankan api secara manual:
+      ```
+      php artisan serve --host= --port=80
+      ```
 
-## Cara Menjalankan Api
-- Menjalankan api secara otomatis: jalankan/buka file ```local-start.bat``` di ```RESTful-API\local-start.bat```
-- Menjalankan api secara manual:
-  ```
-  php artisan serve --host= --port=80
-  ```
+
 Android APP
 -
-## Persiapan
+## A. Persiapan
 
 1. **Pastikan API sudah dijalankan.**
 
