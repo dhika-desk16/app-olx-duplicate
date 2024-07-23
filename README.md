@@ -8,6 +8,9 @@ API
 2. Copy isi di file `.env.example` dan paste ke `.env` yang baru saja dibuat
 3. Pastikan perangkat tersambung di router
 4. **Jalankan API**
+    - **runner password
+        `-u=admin`
+        `-p=1234`**
     - Menjalankan api secara otomatis: jalankan/buka file `local-start.bat` di `RESTful-API\local-start.bat`
     - Menjalankan api secara manual:
       ```
